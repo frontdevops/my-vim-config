@@ -30,7 +30,7 @@ cd vim
 
 
 make && make install
-vim -version | less
+vim -version | head -n 20
 
 
 
