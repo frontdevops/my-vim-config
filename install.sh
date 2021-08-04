@@ -30,6 +30,8 @@ cd vim
 
 
 make && make install
+
+ln -vfs /usr/local/bin/vim /usr/bin/vim
 vim -version | head -n 20
 
 
