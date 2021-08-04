@@ -36,6 +36,7 @@ vim -version | head -n 20
 
 
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 cd
 curl -O "https://raw.githubusercontent.com/frontdevops/myvim/main/.vimrc"
