@@ -1,6 +1,6 @@
 # My Geek Vim
 
-My Vim configuration for geeks ¯\_(ツ)_/¯
+My Vim configuration for geeks `¯\_(ツ)_/¯`
 
 ```
 
