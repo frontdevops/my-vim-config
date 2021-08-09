@@ -1,6 +1,8 @@
 # My Geek Vim
 
-My Vim configuration for geeks `¯\_(ツ)_/¯`
+My simple Vim configuration for editing any source code.
+
+Suitable for all geeks `¯\_(ツ)_/¯`
 
 ```
 
