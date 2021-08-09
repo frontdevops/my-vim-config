@@ -4,21 +4,6 @@ My simple Vim configuration for editing any source code.
 
 Suitable for all geeks `¯\_(ツ)_/¯`
 
-```
-
-───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───
-───█▒▒░░░░░░░░░▒▒█───
-────█░░█░░░░░█░░█────
-─▄▄──█░░░▀█▀░░░█──▄▄─
-█░░█─▀▄░░░░░░░▄▀─█░░█
-█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
-█░░║║║╠─║─║─║║║║║╠─░░█
-█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
-█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
-
-
-```
 
 ![Example of my VIM workspace screenshot](https://github.com/frontdevops/my-vim-config/blob/main/screen-1.png)
 
