@@ -1,10 +1,28 @@
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Init variables						 {{{
+"
+	" Set vim home directory
+	if has("win32") || has('win64')
+		let $VIMHOME = $HOME."/vimfiles/"
+	else
+		let $VIMHOME = $HOME."/.vim/"
+	endif
+" }}}
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Init settings						 {{{
+"
+" Включаем 256 цветов в терминале, мы ведь работаем из иксов?
+" Нужно во многих терминалах, например в gnome-terminal
+set t_Co=256
+syntax on "Включить подсветку синтаксиса
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set encoding=UTF-8 " Кодировка файлов по умолчанию
 set termencoding=UTF-8 "Кодировка терминала
 set fileencodings=utf8,cp1251
-set enc=utf-8
 scriptencoding utf-8
+" }}}
 
 
 " set the runtime path to include Vundle and initialize
@@ -71,79 +89,25 @@ filetype plugin indent on    " required
 
 
 
-" Настройки табов для Python, согласно рекоммендациям
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab "Ставим табы пробелами
-set softtabstop=4 "4 пробела в табе
-" Автоотступ
-set autoindent
-" Подсвечиваем все что можно подсвечивать
-let python_highlight_all = 1
-" Включаем 256 цветов в терминале, мы ведь работаем из иксов?
-" Нужно во многих терминалах, например в gnome-terminal
-set t_Co=256
-
-" Перед сохранением вырезаем пробелы на концах (только в .py файлах)
-autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
-" В .py файлах включаем умные отступы после ключевых слов
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-
-syntax on "Включить подсветку синтаксиса
-
-set nu "Включаем нумерацию строк
-set mousehide "Спрятать курсор мыши когда набираем текст
-set mouse=a "Включить поддержку мыши
-set novisualbell "Не мигать
-set t_vb= "Не пищать! (Опции 'не портить текст', к сожалению, нету)
-" Удобное поведение backspace
-set backspace=indent,eol,start whichwrap+=<,>,[,]
-" Вырубаем черточки на табах
-set showtabline=1
-
-" Переносим на другую строчку, разрываем строки
-set wrap
-set linebreak
-
-" Вырубаем .swp и ~ (резервные) файлы
-set nobackup
-set noswapfile
-
-set clipboard=unnamed
-set ruler
-
-set hidden
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
-
-" Выключаем звук в Vim
-set visualbell t_vb=
-
-colorscheme OceanicNext
-
-set guifont=Monaco:h12
-
-set splitbelow " Always split below
-set incsearch  " Enable incremental search
-set hlsearch   " Enable highlight search
-
-nmap <F8> :TagbarToggle<CR>
-nnoremap <silent> <expr> <F6> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
-
-" nmap <C-d> :t.<CR>
-
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g'\"" | endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Load basic settings					 {{{
+"
+	source $VIMHOME/theme.vim
+	source $VIMHOME/editor.vim
+	source $VIMHOME/keybindings.vim
+" }}}
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Load local settings					 {{{
+"
+if filereadable($PWD."/.vi")
+    source $PWD/.vi
 endif
-
+" }}}
 
 
 " EOF "
