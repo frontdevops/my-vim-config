@@ -13,11 +13,9 @@ scriptencoding utf-8
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
-
     Plugin 'tpope/vim-fugitive'
     Plugin 'git://git.wincent.com/command-t.git'
     Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
     Plugin 'flazz/vim-colorschemes'
     Plugin 'tpope/vim-surround'
     Plugin 'preservim/nerdtree'
@@ -29,12 +27,8 @@ call vundle#begin()
     Plugin 'vim-airline/vim-airline-themes'
     Plugin 'xolox/vim-misc'
 	Plugin 'xolox/vim-easytags'					" Update ctags on the fly
-    Plugin 'xolox/vim-colorscheme-switcher'
-
 	Plugin 'ctrlpvim/ctrlp.vim'					" Find file in project
 	Plugin 'airblade/vim-gitgutter'				" Show changed lines
-	Plugin 'majutsushi/tagbar'					" Show class navigation tree
-
 call vundle#end()
 filetype plugin indent on
 
