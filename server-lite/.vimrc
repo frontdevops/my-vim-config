@@ -33,10 +33,7 @@ call vundle#begin()
 
 	Plugin 'ctrlpvim/ctrlp.vim'					" Find file in project
 	Plugin 'airblade/vim-gitgutter'				" Show changed lines
-	Plugin 'Valloric/YouCompleteMe'				" Autocomplete code
-	Plugin 'ternjs/tern_for_vim'				" Ctags for JavaScript
 	Plugin 'majutsushi/tagbar'					" Show class navigation tree
-	Plugin 'evidens/vim-twig'					" Twig syntax highlight
 
 call vundle#end()
 filetype plugin indent on
