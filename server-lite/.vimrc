@@ -87,6 +87,11 @@ let python_highlight_all = 1
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
+" imap  <Esc>:tabnew<CR>
+" Next     tab: gt
+" Prior    tab: gT
+" Numbered tab: nnngt
+
 map <silent> <F6> :NERDTreeToggle<CR>
 map <silent> <F7> :NERDTreeFind<CR>
 map <silent> <F8> :TagbarToggle<CR>
